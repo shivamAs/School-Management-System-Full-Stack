@@ -1,13 +1,11 @@
 # School-Management-System-Full-Stack
 This is SMS developed using spring boot as backend and Angular as frontend with Oracle as a database
 
-# Team-2-Online-Banking-System
+
 
 ## About
-V.A.S.P is an Angular web application which is made on Angular using Spring Boot and Oracle as databse. 
-- Admins can add new employees, approve the requests and make significant changes.
-- Employees can add new customers, approve the requests and make significant changes.
-- Customers can register, login and use the banking services with this application. 
+SMS is an Angular web application which is made on Angular using Spring Boot and Oracle as databse. 
+. 
 
 ## Frameworks/Tools used
 
@@ -45,19 +43,7 @@ ng serve
 
 
 
-# Login credentials :
 
-## Admin :
-* Identifier : 11112222
-   Password : Varun@123
-   
-## Employee :
-* Username : 22223333
-   Password : Aastha@123
- 
-## Customer :
-* Username : 33334444
-   Password : Ankith@123
 
 # Using Tech:
 
