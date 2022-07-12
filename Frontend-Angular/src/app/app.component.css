@@ -1,0 +1,12 @@
+.logo
+{
+    color: wheat;
+    background-color: purple;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 35px;
+    color: white;
+    font-weight: 900px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

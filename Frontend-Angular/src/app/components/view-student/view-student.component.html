@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<form (ngSubmit)="getAllStudents()">         
+    <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+</form>
+<body>
+    
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>VIEW STUDENT DETAILS</h3>
+                        <br>
+        <div class="rrr">
+            <label><b> Name: </b></label> {{student.name}}
+        </div>
+        <div class="rrr">
+            <label><b> RollNo: </b></label> {{student.rollNo}}
+        </div>
+        <div class="rrr">
+            <label><b> Class: </b></label> {{student.classNo}}
+        </div>
+        <div class="rrr">
+            <label><b> Age: </b></label> {{student.age}}
+        </div>
+        <div class="rrr">
+            <label><b> Father: </b></label> {{student.father}}
+        </div>
+        <div class="rrr">
+            <label><b> Mother: </b></label> {{student.mother}}
+        </div>
+        <div class="rrr">
+            <label><b> AdmissionNo: </b></label> {{student.id}}
+        </div>
+        <div class="rrr">
+            <label><b> Address: </b></label> {{student.address}}
+        </div>
+    
+</div>
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>

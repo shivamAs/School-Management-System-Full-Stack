@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+<div class="content">
+
+<form (ngSubmit)="loginUser()">         
+    <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+    <p class="title">CLASS DETAILS</p><br>
+    <button (click)="createClass()" class="btn btn-in"> Add New Class
+    </button>  </form>
+  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Class Teacher </th>
+            <th> Class</th>
+            <th> Section</th>
+            <th> Strength </th>
+            <th> Periods </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr></tr>
+        <tr *ngFor="let class1 of classes">
+            <td> {{class1.classTeacher}} </td>
+            <td> {{class1.classNo}} </td>
+            <td> {{class1.section}} </td>
+            <td> {{class1.strength}} </td>
+            <td> {{class1.periods}} </td>
+
+            <td class="crud">
+                <button 
+                (click) = "updateClass(class1.id)"
+                class="btn btn-info"> Update
+                </button>
+                &nbsp;
+                <button 
+                (click) = "viewClass(class1.id)"
+                class="btn btn-inf"> View
+                </button>
+                &nbsp;
+                <button 
+                (click) = "deleteClass(class1.id)"
+                class="btn btn-danger" onclick="deleteClass()"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+
+</html>

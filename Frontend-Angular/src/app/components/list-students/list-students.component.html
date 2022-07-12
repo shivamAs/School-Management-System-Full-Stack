@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+<div class="content">
+
+<form (ngSubmit)="loginUser()">
+    <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+    <p class="title">STUDENT DETAILS</p><br>
+    <button (click)="createStudent()" class="btn btn-in"> Add New Student
+    </button>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th>NAME</th>
+          <th> ROLL NO</th>
+          <th>CLASS</th>
+          <th>AGE</th>
+          <th>FATHER'S NAME</th>
+          <th>MOTHER'S NAME</th>
+          <th>ADDRESS</th>
+          <th>ADMISSION NO</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr></tr>
+        <tr *ngFor="let student of students">
+            <td> {{student.name}} </td>
+            <td> {{student.rollNo}} </td>
+            <td> {{student.classNo}} </td>
+            <td> {{student.age}} </td>
+            <td> {{student.father}} </td>
+            <td> {{student.mother}} </td>
+            <td> {{student.address}} </td>
+            <td> {{student.id}} </td>
+
+
+            <td class="crud">
+                <button (click)="updateStudent(student.id)" class="btn btn-info"> Update
+                </button>
+                &nbsp;
+                <button (click)="viewStudent(student.id)" class="btn btn-inf"> View
+                </button>
+                &nbsp;
+                <button (click)="deleteStudent(student.id)" class="btn btn-danger" onclick="deleteStudent()"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+</body>
+
+</html>

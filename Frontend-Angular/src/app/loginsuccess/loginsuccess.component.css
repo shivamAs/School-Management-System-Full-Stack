@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 635px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-image: 
+    linear-gradient(to bottom, rgba(227, 228, 235, 0.52), rgba(221, 250, 197, 0.23)),
+    url('/assets/Img.jpg');
+    background-size: cover;
+    background-repeat:no-repeat ;
+}
+
+.loginSuccess{
+    display: flex;
+    padding: 80px 100px 143px 160px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button{
+    height: 130px;
+    width: 250px;
+    border: 0px solid #0b0a0a;
+    border-radius: 10px;
+    padding: 18px 10px 20px 10px;
+    margin-right: 60px;
+    margin-bottom: 140px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: darkgray;
+    box-shadow:  5px 5px 4px #0b0a0a,
+    -5px -5px 4px #2b2626;
+}
+
+.button2{
+    height: 90px;
+    width: 160px;
+    border: 0px solid #0b0a0a;
+    border-radius: 10px;
+    padding: 12px 20px 20px 20px;
+    margin-right: 50px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    background: darkgray;
+    box-shadow:  5px 5px 4px #0b0a0a,
+    -5px -5px 4px #2b2626;
+}
+
+.button:active,
+.button2:active {
+    border-radius: 10px;
+    background: darkgray;
+    box-shadow: inset 5px 5px 5px #0b0a0a,
+    inset -5px -5px 5px #2b2626;    
+}
+
+.button .fa, .fas{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.button2 .fa{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h1
+{
+    font-size:35px;
+    font-weight:bolder;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* h1{color:blue}
+h1{text-align: center;} 
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.header{
+    background: rgb(0, 100, 0);;
+    width: 100%;
+    height: 85px;
+
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+} 
+.logo
+{
+    width: 50%;
+    padding-top: 32px;
+    float: left;
+}
+.menu-bar{
+    background:  rgb(100, 0, 100);
+    text-align: center;
+    margin-right: 0px;
+    height: 200px;
+    width: 1600px ;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-bar li:hover
+{
+    background-color: #2bab0d;
+    border-radius: 3px;
+}
+.menu-bar.fa{
+    margin-right: 8px;
+    
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    margin-top: 15px;
+    margin-left: -15px;
+    
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color: #b2ff00;
+}
+.logo-text{
+color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-left: 100px;
+    text-align: center;
+}
+.image{
+    padding: 3px;
+    
+}
+
+
+ .main-body
+{
+width: 100%;
+height: 580px; 
+ max-height: 580px; 
+background-image: url("/assets/logo.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+ }
+.fa-angle-right{
+   float: right;
+}
+.sub-menu-2{
+    display: none;
+
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgb(0, 100, 0);
+}
+
+
+
+
+
+
+
+
+
+
+.column {
+    float:right;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    object-position: 500px 500px;
+  } */

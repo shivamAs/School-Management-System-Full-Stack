@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<form (ngSubmit)="getAllTeachers()">         
+    <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+</form>
+<body>
+  
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>VIEW TEACHER DETAILS</h3>
+                        <br>
+        <div class="rrr">
+            <label><b> Id: </b></label> {{teacher.id}}
+        </div>
+        <div class="rrr">
+            <label><b> Name: </b></label> {{teacher.name}}
+        </div>
+        <div class="rrr">
+            <label><b> Class: </b></label> {{teacher.classNo}}
+        </div>
+        <div class="rrr">
+            <label><b> Age: </b></label> {{teacher.age}}
+        </div>
+        <div class="rrr">
+            <label><b> Address: </b></label> {{teacher.address}}
+        </div>
+        <div class="rrr">
+            <label><b> Phone No: </b></label> {{teacher.phoneNo}}
+        </div>
+        <div class="rrr">
+            <label><b> Subject: </b></label> {{teacher.subject}}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>

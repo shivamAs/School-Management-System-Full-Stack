@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form (ngSubmit)="getAllStudents()">         
+        <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+    </form>
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>UPDATE STUDENT DETAILS</h3>
+        <form #Studentform="ngForm" class="requires-validation" novalidate (ngSubmit) = "onSubmit()"> 
+    
+            <small class="text-danger" [class.d-none]="name.valid || name.untouched">Valid input required</small><br>
+            <label> Name </label>
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="Name" placeholder="Field required"
+                [(ngModel)] = "student.name" name="firstName"required  #name="ngModel"
+                [class.is-invalid]="name.invalid && name.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="rollNo.valid || rollNo.untouched">Valid input required</small><br>
+            <label> RollNo </label>
+            <div class="col-md-12">
+                <input type="number" class="form-control" id="RollNo" placeholder="Field required"
+                [(ngModel)] = "student.rollNo" max="60"min=1 name="rollNo"required  #rollNo="ngModel"
+                [class.is-invalid]="rollNo.invalid && rollNo.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="classNo.valid || classNo.untouched">Valid input required</small><br>
+            <label> Class </label>
+            <div class="col-md-12">
+                <input type="number" class="form-control" id="ClassNo" placeholder="Field required"
+                [(ngModel)] = "student.classNo" max="12" min="1" name="classNo"required  #classNo="ngModel"
+                [class.is-invalid]="classNo.invalid && classNo.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="age.valid || age.untouched">Valid input required</small><br>
+            <label> Age </label>
+            <div class="col-md-12">
+                <input type="number" class="form-control" id="Age" placeholder="Field required"
+                [(ngModel)] = "student.age" max="20" min="4" name="age"required  #age="ngModel"
+                [class.is-invalid]="age.invalid && age.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="father.valid || father.untouched">Valid input required</small><br>
+            <label> Father's Name </label>
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="Father" placeholder="Field required"
+                [(ngModel)] = "student.father" name="father"required  #father="ngModel"
+                [class.is-invalid]="father.invalid && father.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="mother.valid || mother.untouched">Valid input required</small><br>
+            <label> Mother's Name </label>
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="Mother" placeholder="Field required"
+                [(ngModel)] = "student.mother" name="mother"required  #mother="ngModel"
+                [class.is-invalid]="mother.invalid && mother.touched">
+            </div>
+    
+            <br>
+    
+            <small class="text-danger" [class.d-none]="address.valid || address.untouched">Valid input required</small><br>
+            <label> Address </label>
+            <div class="col-md-12">
+                <input type="text" class="form-control" id="Address" placeholder="Field required"
+                [(ngModel)] = "student.address" name="address"required  #address="ngModel"
+                [class.is-invalid]="address.invalid && address.touched">
+            </div>
+            
+            <br>
+    
+            <div class="form-button mt-3">
+                <button [disabled]="Studentform.form.invalid" class="btn btn-inf" type="submit" onclick="onSubmit()"> Submit </button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> -->
+</body>
+</html>

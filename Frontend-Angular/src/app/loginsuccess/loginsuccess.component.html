@@ -1,0 +1,71 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Angular1</title>
+
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+
+<body>
+  <h1>
+    DASHBOARD
+  </h1>
+  <div class="loginSuccess">
+  
+
+    <form (ngSubmit)="getAllStudents()"> 
+    <button class="button"><i class="fa fa-user-graduate"></i><br>Student Details</button>
+    </form>
+
+    <form (ngSubmit)="getAllTeachers()"> 
+    <button class="button"><i class="fa fa-book-reader"></i><br>Teacher Details</button>
+    </form>
+
+    <form (ngSubmit)="getAllClasses()"> 
+    <button class="button"><i class="fa fa-chalkboard-teacher"></i><br>Class Details</button>
+    </form>
+
+    <form (ngSubmit)="getAllStaffs()"> 
+    <button class="button"><i class="fas fa-group"></i><br>Staff Details</button>
+    </form>
+
+    <form (ngSubmit)="registerUser()"> 
+    <button class="button2"><i class="fa fa-cogs"></i><br>Log out</button>
+    </form>
+            
+          
+    
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

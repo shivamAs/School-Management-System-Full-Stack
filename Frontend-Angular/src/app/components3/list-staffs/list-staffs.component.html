@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+<div class="content">
+
+<form (ngSubmit)="loginUser()">         
+ <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+    <p class="title">STAFF DETAILS</p><br>
+    <button (click)="createStaff()" class="btn btn-in"> Add New Staff
+    </button>  </form>
+  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Name </th>
+            <th> Age </th>
+            <th> Address </th>
+            <th> Phone No </th>
+            <th> Role </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr></tr>
+        <tr *ngFor="let staff of staffs">
+            <td> {{staff.id}} </td>
+            <td> {{staff.name}} </td>
+            <td> {{staff.age}} </td>
+            <td> {{staff.address}} </td>
+            <td> {{staff.phoneNo}} </td>
+            <td> {{staff.role}} </td>
+          
+
+            <td class="crud">
+                <button 
+                (click) = "updateStaff(staff.id)"
+                class="btn btn-info"> Update
+                </button>
+                &nbsp;
+                <button 
+                (click) = "viewStaff(staff.id)"
+                class="btn btn-inf"> View
+                </button>
+                &nbsp;
+                <button 
+                (click) = "deleteStaff(staff.id)"
+                class="btn btn-danger" onclick="deleteStaff()"> Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+
+</html>

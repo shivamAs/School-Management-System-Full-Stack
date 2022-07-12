@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form (ngSubmit)="getAllClasses()">         
+        <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+    </form>
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>UPDATE CLASS DETAILS</h3>
+<form #Classform="ngForm" class="requires-validation" novalidate (ngSubmit) = "onSubmit()"> 
+    <br>
+        <small class="text-danger" [class.d-none]="classNo.valid || classNo.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Class </label>
+            <input type="number" class="form-control" id="ClassNo" placeholder="Field required"
+            [(ngModel)] = "class1.classNo" max="12" min="1" name="classNo"required  #classNo="ngModel"
+            [class.is-invalid]="classNo.invalid && classNo.touched">
+        </div>
+        <br>
+
+        <small class="text-danger" [class.d-none]="section.valid || section.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Section </label>
+            <input type="text" class="form-control" id="Section" placeholder="Field required"
+            [(ngModel)] = "class1.section" name="section"required  #section="ngModel"
+            [class.is-invalid]="section.invalid && section.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="classTeacher.valid || classTeacher.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Class Teacher </label>
+            <input type="String" class="form-control" id="ClassTeacher" placeholder="Field required"
+            [(ngModel)] = "class1.classTeacher" name="classTeacher"required  #classTeacher="ngModel"
+            [class.is-invalid]="classTeacher.invalid && classTeacher.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="strength.valid || strength.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Strength </label>
+            <input type="number" class="form-control" id="Strength" placeholder="Field required"
+            [(ngModel)] = "class1.strength" max="60" min="30" name="strength"required  #strength="ngModel"
+            [class.is-invalid]="strength.invalid && strength.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="periods.valid || periods.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Periods </label>
+            <input type="number" class="form-control" id="Periods" placeholder="Field required"
+            [(ngModel)] = "class1.periods" max="8" min="6" name="periods"required  #periods="ngModel"
+            [class.is-invalid]="periods.invalid && periods.touched">
+        </div>
+
+        <br>
+        <div class="form-button mt-3">
+            <button [disabled]="Classform.form.invalid" class="btn btn-inf" type="submit" onclick="onSubmit()"> Submit </button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>

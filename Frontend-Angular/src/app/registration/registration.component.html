@@ -1,0 +1,179 @@
+
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Real</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'>
+  <link rel="stylesheet" href="./registration.component.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>  
+  <div class="wrapper" >
+  <div class="logo">
+  <img src="assets/logo2.jpg" alt="">
+  </div>
+  <div class="text-center mt-4 name">
+  SMS
+  </div>
+  <form class="p-3 mt-3" #Registerform="ngForm" (ngSubmit)="registerUser()">
+
+    <small class="text-danger" [class.d-none]="username.valid || username.untouched">User Name is required </small>
+  <div class="form-field d-flex align-items-center">
+  <span class="fa fa-user"></span>
+  <input type="text" name="username" placeholder="Enter your name"  name="username" [(ngModel)]="user.userName" required  #username="ngModel"
+  [class.is-invalid]="username.invalid && username.touched">
+  </div>
+
+  <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required </small>
+  <div class="form-field d-flex align-items-center">
+    <span class="fa fa-envelope"></span>
+    <input type="email" name="email" placeholder="Enter valid email"  name="email" [(ngModel)]="user.emailId" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+    [class.is-invalid]="email.invalid && email.touched">
+  </div>
+
+  <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required </small>
+  <div class="form-field d-flex align-items-center">
+    <span class="fa fa-key"></span>
+    <input type="password" name="password" placeholder="Enter Password"  name="password" [(ngModel)]="user.password" required  #password="ngModel"
+    [class.is-invalid]="password.invalid && password.touched">
+  </div>
+
+  <small class="text-danger" [class.d-none]="cpassword.value == password.value || cpassword.untouched">Password & Confirm Password must be same</small>
+  <div class="form-field d-flex align-items-center">
+    <span class="fa fa-key"></span>
+    <input type="password" name="cpassword" placeholder="Confirm Password"  name="cpassword" [(ngModel)]="user.cpassword" required  #cpassword="ngModel"
+    [class.is-invalid]="cpassword.invalid || password.invalid && (cpassword.touched)">
+  </div>
+
+  <button class="btn mt-3" [disabled]="Registerform.form.invalid || cpassword.value != password.value" onclick="registerUser()" type="submit">Register</button>
+
+  </form>
+  <div class="text-center fs-6">
+  <a href="/login">Existing user ? Login here</a>
+  </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div style="min-width: 100%;min-height: 200%;background-image:url(assets/img4.jpg);"> 
+  <br><br><br>
+    <div class="container" style="max-width: 600px;background-color:rgba(0, 0, 0, 0.575); color:blue">
+      <br>
+      <h1 style="text-align: center;">User Registration </h1>
+     
+        <form #Registerform="ngForm" (ngSubmit)="registerUser()">         
+            <small class="text-danger">{{msg}}</small>
+    
+            <br>
+    
+            <div class="form-group">
+              <label for="username">User Name:</label> 
+              <input type="text" class="form-control" placeholder="Enter username" name="username" [(ngModel)]="user.userName" required #username="ngModel"   
+              [class.is-invalid]="username.invalid && username.touched">
+              <small class="text-danger" [class.d-none]="username.valid || username.untouched">username is required </small>
+            </div>
+
+            <br>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" placeholder="Enter email"  name="email" [(ngModel)]="user.emailId" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required </small>
+          </div>
+
+          <br>
+    
+          <div class="form-group">
+            <label class="password" for="pwd">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="user.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required </small>
+          </div>  
+          
+          <br>
+
+          <div class="form-group">
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" class="form-control" placeholder="Enter confirm password" name="cpassword" [(ngModel)]="user.password" required #cpassword="ngModel"
+            [class.is-invalid]="cpassword.invalid && cpassword.touched">
+            <small class="text-danger" [class.d-none]="cpassword.value == password.value || cpassword.untouched">password & Confirm password must be same</small>
+          </div>
+
+          <br>
+
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+    
+          <br> 
+
+          <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-primary">Register</button>
+          <small [routerLink]="['/login']">Existing user ? Login here</small>
+          
+        </form>
+          <br><br> 
+    </div>
+          <br><br><br>
+</div>
+-->
+          
+
+
+
+

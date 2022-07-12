@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<form (ngSubmit)="getAllStaffs()">         
+    <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left"></i></button>
+</form>
+<body>
+   
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>ADD STAFF</h3>
+        <form #Staffform="ngForm" class="requires-validation" novalidate (ngSubmit) = "onSubmit()"> 
+    
+            <br>
+
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Name </label>
+            <input type="text" class="form-control" id="Name" placeholder="Field required"
+            [(ngModel)] = "staff.name" name="name"required  #name="ngModel"
+            [class.is-invalid]="name.invalid && name.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="age.valid || age.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Age </label>
+            <input type="number" class="form-control" id="Age" placeholder="Field required"
+            [(ngModel)] = "staff.age" max="60" min="18" name="age"required  #age="ngModel"
+            [class.is-invalid]="age.invalid && age.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="address.valid || address.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Address </label>
+            <input type="String" class="form-control" id="Address" placeholder="Field required"
+            [(ngModel)] = "staff.address" name="address"required  #address="ngModel"
+            [class.is-invalid]="address.invalid && address.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="phoneNo.valid || phoneNo.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Phone No </label>
+            <input type="number" max="9999999999" min="1000000000" class="form-control" id="PhoneNo" placeholder="Field required"
+            [(ngModel)] = "staff.phoneNo" name="phoneNo"required  #phoneNo="ngModel"
+            [class.is-invalid]="phoneNo.invalid && phoneNo.touched">
+        </div>
+
+        <br>
+
+        <small class="text-danger" [class.d-none]="role.valid || role.untouched">Valid input required</small><br>
+        <div class="form-group">
+            <label> Role  </label>
+            <input type="text" class="form-control"  id="Role" placeholder="Field required"
+            [(ngModel)] = "staff.role" name="role"required  #role="ngModel"
+            [class.is-invalid]="role.invalid && role.touched">
+        </div>
+       
+        <br>
+
+        
+        <div class="form-button mt-3">
+            <button [disabled]="Staffform.form.invalid" class="btn btn-inf" type="submit" onclick="onSubmit()"> Submit </button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>
